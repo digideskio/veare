@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="Lukas Oppermann - vea.re" />
+	<meta name="description" content="" />
+	<meta name="robots" content="index,follow" />
+	<meta name="language" content="en" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+	<script type="text/javascript" charset="utf-8">
+	// get height & width
+	var w = window,
+	    d = document,
+	    e = d.documentElement,
+	    g = d.getElementsByTagName('body')[0],
+	    x = w.innerWidth || e.clientWidth || g.clientWidth,
+	    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+	// assign css class
+	document.write("<style>.fullscreen{ height:"+y+"px; width:"+x+"px;}</style>");
+	</script>
+	<script type="text/javascript" src="//use.typekit.net/dsj6jkh.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<style type="text/css" media="screen">
+	body, html{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		background: rgb(255,255,255);
+		display: block;
+	}
+/*	.font{
+		font-family: "Gotham";
+	}*/
+	#logo{
+		top: 20px;
+		left: 25px;
+		position: absolute;
+	}
+	#arrow_down{
+		opacity: 0.2;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		z-index: 999;
+	}
+	#body, #content, #inner_body{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		position: relative;
+	}
+	#header{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#menu{
+		cursor: pointer;
+		position: fixed;
+		right: 20px;
+		top: 20px;
+		z-index: 999;
+	}
+	.menu{
+		display: block;
+		margin: 20px 10px;
+	}
+	.block{
+		position: relative;
+		display: table;
+		margin: 0;
+		width: 100%;
+	}
+	.section{
+		float: left;
+		font-family: "source-sans-pro",sans-serif;
+	}
+	.section img{
+		float: left;
+	}
+	.section .content{
+		float: left;
+		text-align: left;
+		font-size: 25px;
+		padding-top: 20px;
+	}
+	.section .content h4{
+		font-size: 200%;
+		margin: 0;
+		font-family: "source-sans-pro",sans-serif;
+	}
+	.block-default{
+		background-color: rgb(255,255,255);
+	}
+	h1.centered, h2.centered, h3.centered{
+		text-align: center;
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+	h1.vertical-centered, h2.vertical-centered, h3.vertical-centered{
+		height: 100%;
+		vertical-align: middle;
+		display: table-cell;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;	
+	}
+	h4{
+
+	}
+	h3{
+		font-size: 100px;
+/*		font-family: "Gotham";*/
+		padding-bottom: 25px;
+		line-height: 110px;
+		font-family: "source-sans-pro",sans-serif;
+		font-weight: "book";
+	}
+	.plus{
+		font-size: 140%;
+	}
+	.big-link{
+		position: relative;
+		display: block;
+		text-align: right;
+		float: right;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 5% 10% 10%;
+		color: inherit;
+		font-size: 60px;
+		font-family: "Maven Pro";
+		padding-bottom: 75px;
+	}
+	.big-link:after{
+		position: absolute;
+		content: " ›";
+		top: 15%;
+		padding-left: 10%;
+		font-size: 160%;
+	}
+	h3.top-out span{
+		position: absolute;
+		top: -50px;
+	}
+	.text-red-flat{
+		color: rgb(225,115,95);
+	}
+	.text-white{
+		color: rgb(255,255,255);
+	}
+	.text-yellow-flat{
+		color: rgb(255,245,100);
+	}
+	.green-flat{
+		background: rgb(180,200,180);
+	}
+	.yellow{
+		background: rgb(240, 210,55);
+	}
+	.orange-flat{
+		background: rgb(230,130,50);
+	}
+	.turquoise-flat{
+		background: rgb(60,170,185);
+	}
+	img.top{
+		margin-top: 100px;
+	}
+	#sidebar{
+		text-align: left;
+		color: rgb(245,245,245);
+		background: rgb(30,30,30);
+		height: 100%;
+		text-transform: uppercase;
+		position: fixed;
+		font-weight: "Medium";
+		top: 0;
+		right: -200px;
+		width: 200px;
+		z-index: 999;
+	}
+	#sidebar a{
+		float: left;
+		width: 100%;
+		padding: 5px 10px 5px 20px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.coffee{
+		display: block;
+		position: relative;
+	}
+	.info-coffee-first, .info-coffee-second, .info-coffee-thrid, .info-coffee-head{
+		position: absolute;
+		top: 40px;
+	}
+	</style>
+	<title>veare</title>
+</head>
+<body>
+	<div id="body" class="fullscreen">
+		<div id="inner_body">
+			<div id="header">
+				<div id="logo">
+					<img src="logo.png" alt="" />
+				</div>
+				<div id="menu">
+					<img src="menu.png" />
+				</div>
+			</div>
+			<div id="arrow_down"><img src="arrow-down.png" alt=""></div>
+			<div id="content">
+				<div class="fullscreen block default first stop-1">
+					<h3 class="centered vertical-centered text-red-flat">
+						<span class="plus">Hello,</span><br />
+						I am a designer<br />
+						<span style="font-size: 50px; position: absolute; margin-top: -20px; left: 380px">& veare is my studio</span>
+					</h3>
+				</div>
+				<div class="fullscreen block green-flat text-yellow-flat stop-2">
+					<div class="coffee">
+						<span class="info-coffee-head">daily caffeine consumption</span>
+						<span class="info-coffee-first">55% coffee</span>
+						<span class="info-coffee-second">40% mate</span>
+						<span class="info-coffee-third">5% other</span>
+						<img src="layout/coffee-top.png" alt="" class="left top">
+					</div>
+					<h3 class="centered">
+						<span class="plus">&</span>
+						I run on coffee.
+					</h3>
+						<a href="#" class="big-link">more about me</a>
+				</div>
+				<div class="fullscreen block text-white turquoise-flat stop-3">
+					<h3 class="text-white">
+						I create
+					</h3>
+						<div class="section">
+							<img src="layout/web.png" alt="" class="left">
+							<div class="content">
+								<h4>Interfaces</h4>
+								<p>
+									Websites & application interfaces<br /> with a focus on usability and user experience.
+								</p>
+							</div>
+						</div>
+						<div class="section stop-4">
+							<img src="layout/.png" alt="" class="left">
+							<div class="content">
+								<h4>Corporate Identities</h4>
+								<p>
+									Modern brand- & corporate designs<br /> which are suited for the new media of today.
+								</p>
+							</div>
+						</div>
+						<div class="section stop-5">
+							<img src="layout/.png" alt="" class="left">
+							<div class="content">
+								<h4>Print designs</h4>
+								<p>
+									Magazines & more<br /> paying attention to typographical details and readability.
+								</p>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div id="sidebar" class="fullscreen font">
+			<div class="menu">
+				<a>Home</a>
+				<a>About</a>
+				<a>Portfolio</a>
+				<a>Blog</a>
+				<a>Contact</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+;(function( $ )
+{
+	// ----------------------------------------------------
+	// debounced resize event (fires once every 100ms)
+	$.fn.fs_resize = function( c, t )
+	{
+		onresize = function(){
+			clearTimeout( t );
+			t = setTimeout( c, 100)
+		};
+		return c;
+	};	
+// ----------------------------------------------------
+// add jquery to scope	
+})( jQuery );
+// ----------------------------------------------------
+$(function(){
+	// resize blocks on resize of window
+	var win = $(window);
+	var win_height = win.height();
+	
+	win.fs_resize(function(){
+		$('.fullscreen').height(win.height());
+	});
+	// scroll top next
+	$('#arrow_down').click(function() {
+	 var _this = $(this);
+	 var _this_pos = _this.offset().top;
+	 _this_pos = Math.floor(_this_pos/win_height)+1;
+	 $('body').animate({'scrollTop' : _this_pos*win_height},'slow');
+	});
+	// menu
+	$('#menu').on('click', function(){
+		if(!$(this).hasClass('active'))
+		{
+			$('#sidebar, #menu, #arrow_down').animate({'right':'+=200'},200).addClass('active');
+			$('#inner_body').animate({'width':$('#inner_body').width()-200}, 210);
+		}
+		else
+		{
+			$('#sidebar, #menu, #arrow_down').animate({'right':'-=200'},200).removeClass('active');
+			$('#inner_body').animate({'width':$('#inner_body').width()+200}, 210);
+		}
+	});
+});
+</script>
+</html>
